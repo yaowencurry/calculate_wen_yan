@@ -1,0 +1,23 @@
+.bar-list__top {
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0278da;
+  line-height: 90rpx;
+  box-sizing: border-box;
+  padding: 15rpx 20rpx;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+.bar-list__info {
+  padding: 15rpx 20rpx;
+}
+.bar-list__button {
+  margin: 40rpx auto;
+  background-color: #0278da;
+  color: #fff;
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "HistoryCard": "./component/HistoryCard"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "历史数据"
+}

@@ -1,0 +1,27 @@
+<view class="history-card" bindtap="handleHistoryDetail" bindtouchmove="handleTouchMove" bindtouchstart="handleTouchStart">
+  <view class="history-card__info" style="margin-left: {{marginLeft}}">
+    <view class="history-card__info-date">{{info.date}}</view>
+    <view class="history-card__info-data">
+      <view class="history-card__info-data-info">
+        <text>称重只数</text>
+        <text>{{info.count}} 只</text>
+      </view>
+      <view class="history-card__info-data-info">
+        <text>均匀度</text>
+        <text>{{info.degree}}%</text>
+      </view>
+      <view class="history-card__info-data-info">
+        <text>平均值</text>
+        <text>{{info.average}}g</text>
+      </view>
+    </view>
+  </view>
+  <view class="history-card__detail" wx:if="{{!isDelete}}">
+    <text>详</text>
+    <text>情</text>
+  </view>
+  <view wx:if="{{isDelete}}" class="history-card__delete" catchtap="handleDelete">
+    <text>删</text>
+    <text>除</text>
+  </view>
+</view>

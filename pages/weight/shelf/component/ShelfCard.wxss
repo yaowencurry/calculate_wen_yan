@@ -1,0 +1,102 @@
+.shelf {
+  padding: 30rpx;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(247, 242, 242, 100);
+  margin-bottom: 30rpx;
+  border-radius: 25rpx;
+  border: 1px solid #eeeeee;
+  width: 340rpx;
+}
+
+.shelf .shelf__title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+.shelf .shelf__title .shelf__title__title {
+  font-size: 34rpx;
+  color: #0278da;
+  font-weight: 700;
+}
+
+.shelf .shelf__title .shelf__title__state {
+  font-size: 28rpx;
+  color: #D01C1C;
+}
+.shelf .shelf__status {
+  margin-bottom: 60rpx;
+  font-size: 24rpx;
+}
+.shelf .shelf__status .shelf__status__item .shelf__status__item__label {
+  color: #333;
+}
+.shelf .shelf__status .shelf__status__item .shelf__status__item__result {
+  color: #D01C1C;
+}
+.shelf .shelf__result {
+  font-size: 32rpx;
+  color: #333;
+}
+.shelf .shelf__result .shelf__result__degree {
+  margin-bottom: 15rpx;
+}
+.shelf .shelf__result .shelf__result__average {
+  margin-bottom: 20rpx;
+}
+.shelf .shelf__date {
+  color: #e0e0e0;
+}
+.shelf-data {
+  padding: 30rpx;
+  background-color: #0278da;
+  box-shadow: 0px 2px 5px 0px rgba(247, 242, 242, 100);
+  margin-bottom: 30rpx;
+  width: 340rpx;
+  border: 1px solid #0278da;
+  border-radius: 25rpx;
+}
+
+.shelf-data .shelf__title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+.shelf-data .shelf__title .shelf__title__title {
+  font-size: 34rpx;
+  color: #fff;
+  font-weight: 700;
+}
+
+.shelf-data .shelf__title .shelf__title__state {
+  font-size: 28rpx;
+  color: #fff;
+}
+.shelf-data .shelf__status {
+  margin-bottom: 60rpx;
+  font-size: 24rpx;
+}
+.shelf-data .shelf__status .shelf__status__item .shelf__status__item__label {
+  color: #fff;
+}
+.shelf-data .shelf__status .shelf__status__item .shelf__status__item__result {
+  color: #fff;
+}
+.shelf-data .shelf__result {
+  font-size: 32rpx;
+  color: #fff;
+}
+.shelf-data .shelf__result .shelf__result__degree {
+  margin-bottom: 15rpx;
+}
+.shelf-data .shelf__result .shelf__result__average {
+  margin-bottom: 20rpx;
+}
+.shelf-data .shelf__date {
+  color: #fff;
+}
