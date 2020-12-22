@@ -16,8 +16,16 @@ Page({
     historyId: null
   },
   handleDetail() {
+    const {
+      shelfId,
+      list,
+      number
+    } = this.data;
+
+    const url = `/pages/weight/detail/detail?shelfId=${shelfId}&barNumber=${list.length+1}&shelfNumber=${number}`;
+    
     wx.navigateTo({
-      url: `/pages/weight/detail/detail?shelfId=${this.data.shelfId}&barNumber=${this.data.list.length+1}&shelfNumber=${this.data.number}`,
+      url
     })
   },
   backToList() {

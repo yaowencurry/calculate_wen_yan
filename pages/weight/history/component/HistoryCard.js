@@ -36,23 +36,28 @@ Component({
    */
   methods: {
     handleHistoryDetail() {
-      if (this.data.isDelete) {
+      const {
+        isDelete,
+        info
+      } = this.data;
+      const url = `/pages/weight/history/detail/historyDetail?id=${info.id}`;
+
+      if (isDelete) {
         this.setData({
           isDelete: false,
           marginLeft: 0
         })
-        return
+      } else {
+        wx.navigateTo({
+          url
+        })
+        this.setData({
+          isDelete: false
+        })
       }
-      wx.navigateTo({
-        url: `/pages/weight/history/detail/historyDetail?id=${this.data.info.id}`
-      })
-      this.setData({
-        isDelete: false
-      })
     },
     handleTouchMove(e) {
       const startX = this.data.startX;
-      console.log(e.touches[0].clientX - startX)
       if (e.touches[0].clientX - startX < -50) {
         wx.vibrateShort();
         this.setData({
@@ -80,7 +85,7 @@ Component({
         })
     },
     confirmDelete(data) {
-      showModal('确定要删除这条历史记录吗？',()=>{
+      showModal('确定要删除这条历史记录吗？', () => {
         data.map((item, index) => {
           if (item.id == this.data.info.id) {
             data.splice(index, 1);
