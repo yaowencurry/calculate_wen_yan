@@ -9,6 +9,6 @@
 
 ### 代码结构
 
-`pages`文件夹下主要存放业务代码
-`utils`文件夹下主要存放计算逻辑等公共代码
-`project.config.json`项目配置文件
+`pages`文件夹下主要存放业务代码 
+`utils`文件夹下主要存放计算逻辑等公共代码 
+`project.config.json`项目配置文件 
