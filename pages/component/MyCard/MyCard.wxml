@@ -1,7 +1,0 @@
-<!--pages/component/MyCard.wxml-->
-<text>pages/component/MyCard.wxml</text>
-<text>{{data}}</text>
-<button bindtap="onTap">传值</button>
-<view>
-  {{info}}
-</view>

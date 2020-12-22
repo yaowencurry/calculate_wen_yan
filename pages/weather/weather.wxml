@@ -1,7 +1,0 @@
-<!--pages/weather/weather.wxml-->
-<text>pages/weather/weather.wxml</text>
-<text class="iconfont icon-share"></text>
-<view>
-  <my-card info="{{data}}" bind:myevent="onMyEvent"></my-card>
-  <view>{{count}}</view>
-</view>

@@ -1,5 +1,0 @@
-{
-  "usingComponents": {
-    "to-do": "../component/ToDo/ToDo/ToDo"
-  }
-}

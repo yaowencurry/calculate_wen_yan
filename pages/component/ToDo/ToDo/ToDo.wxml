@@ -1,7 +1,0 @@
-<view class="todo">
-  <view class="todo__input">
-    <input type="text" class="todo__input--input" model:value="{{value}}" bindinput="bindKeyInput" placeholder="请输入待办事项"/>
-    <button size="mini" class="todo__input--btn" type="primary" bindtap="handleAdd">添加</button>
-  </view>
-  <to-do-list list="{{list}}" bind:change="handleChange" bind:delete="handeDelete"></to-do-list>
-</view>
