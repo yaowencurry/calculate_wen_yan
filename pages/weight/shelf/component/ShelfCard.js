@@ -64,18 +64,26 @@ Component({
    */
   methods: {
     toBarList() {
-      if (this.data.endTime - this.data.startTime < 350) {
+      const {
+        endTime,
+        startTime,
+        info,
+        dataId,
+        isDetail
+      } = this.data;
 
-        if (this.data.isDetail == '1') {
-          wx.navigateTo({
-            url: `/pages/weight/barlist/index?shelfId=${this.data.info.shelfId}&id=${this.data.dataId}`,
-          })
-        } else {
-          wx.navigateTo({
-            url: `/pages/weight/barlist/index?shelfId=${this.data.info.shelfId}`,
-          })
-        }
-      }
+      if (endTime - startTime >= 350) return
+
+      let BASE_URL = `/pages/weight/barlist/index?shelfId=${info.shelfId}`,
+        url;
+
+      isDetail == '1' ?
+        url = BASE_URL + `&id=${dataId}` :
+        url = BASE_URL;
+
+      wx.navigateTo({
+        url
+      })
     },
     bindTouchStart(e) {
       this.setData({

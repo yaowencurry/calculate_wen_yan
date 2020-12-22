@@ -73,10 +73,10 @@ Component({
         historyId
       } = this.data;
       let BASE_URL = '/pages/weight/detail/detail?';
+      let url = `${BASE_URL}shelfId=${shelfId}&barId=${info.barId}&barNumber=${index+1}`;
+      
       if (isHistory) {
-        wx.navigateTo({
-          url: `${BASE_URL}shelfId=${shelfId}&barId=${info.barId}&barNumber=${index+1}&historyId=${historyId}&isHistory=1`,
-        })
+        url += `&historyId=${historyId}&isHistory=1`;
       } else {
         if (isDelete) {
           this.setData({
@@ -85,13 +85,13 @@ Component({
           })
           return
         }
-        wx.navigateTo({
-          url: `${BASE_URL}?shelfId=${this.data.shelfId}&barId=${this.data.info.barId}&barNumber=${this.data.index+1}`,
-        })
         this.setData({
           isDelete: false
         })
       }
+      wx.navigateTo({
+        url
+      })
     },
     handleTouchMove(e) {
       if (this.data.isHistory) return
