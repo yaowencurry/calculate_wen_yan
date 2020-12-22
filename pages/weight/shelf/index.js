@@ -11,6 +11,7 @@ Page({
    */
   data: {
     array: ['克(g)', '千克(kg)'],
+    
     index: null,
     rangeData: ['0', '1'],
     list: [],
