@@ -1,0 +1,3 @@
+<view class="detail">
+  <ShelfCard wx:for="{{list}}" wx:key="index" info="{{item}}" isDetail="1" unit="{{unit}}" dataId="{{id}}"></ShelfCard>
+</view>

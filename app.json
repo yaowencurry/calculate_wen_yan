@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/weight/shelf/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/weather/weather",
+    "pages/Mine/MyDoTo",
+    "pages/love/love",
+    "pages/weight/detail/detail",
+    "pages/weight/barlist/index",
+    "pages/weight/history/history",
+    "pages/weight/history/detail/historyDetail",
+    "pages/weight/dataTotal/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0278da",
+    "navigationBarTitleText": "快计算",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/weight/shelf/index",
+        "text": "我的首页",
+        "iconPath": "./utils/img/home.png",
+        "selectedIconPath": "./utils/img/home-active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "计算器",
+        "iconPath": "./utils/img/cal.png",
+        "selectedIconPath": "./utils/img/cal-active.png"
+      },
+      {
+        "pagePath": "pages/weight/history/history",
+        "text": "历史",
+        "iconPath": "./utils/img/history.png",
+        "selectedIconPath": "./utils/img/history-active.png"
+      }
+    ],
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "selectedColor": "#0278da"
+  }
+}

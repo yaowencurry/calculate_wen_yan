@@ -1,0 +1,20 @@
+<view class="bar-item" bindtap="toBarDetail" bindtouchmove="handleTouchMove" bindtouchstart="handleTouchStart">
+  <view class="bar-item-box" style="margin-left: {{marginLeft}}">
+    <text class="bar-item__number">{{index+1}}号栏</text>
+    <view class="bar-item__info">
+      <view>
+        <text>称重只数</text>
+        <text>{{info.detail.length}}只</text>
+      </view>
+      <view>
+        <text>均匀度</text>
+        <text>{{info.degree ? info.degree + "%" : '--'}}</text>
+      </view>
+      <view>
+        <text>平均值</text>
+        <text>{{info.average ? info.average + 'g' : '--'}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="bar-item__delete" wx:if="{{isDelete}}" catchtap="handleDelete">删除</view>
+</view>

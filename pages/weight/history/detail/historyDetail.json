@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ShelfCard": "../../shelf/component/ShelfCard"
+  },
+  "navigationBarTitleText": "历史数据——棚"
+}

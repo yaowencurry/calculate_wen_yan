@@ -1,0 +1,17 @@
+.todo__input {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 20rpx;
+}
+
+.todo__input--input {
+  border: 1px solid #e0e0e0;
+  width: 75%;
+  height: 32rpx;
+  padding: 10rpx 15rpx;
+}
+.todo__input--btn {
+  margin-right: 0;
+}

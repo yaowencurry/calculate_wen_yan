@@ -1,0 +1,22 @@
+<view class="{{isHistory ? 'history': 'detail' }}">
+  <view class="detail-top">
+    <view class="detail-top__title">
+      <text class="detail-top__title__number">{{shelfNumber}} 号棚 ｜ {{barNumber}}号栏</text>
+      <text class="detail-top__title__now">当前已称重: {{list.length}}只</text>
+    </view>
+    <button wx:if="{{!isHistory}}" size="mini" class="submit-btn" bindtap="backBarList">完成</button>
+  </view>
+  <view class="detail-info">
+    <view class="detail-info__item" wx:for="{{list}}" wx:key="index" bindtap="handleDelete" data-index="{{index}}">
+      {{item.count}}</view>
+  </view>
+  <view class="detail-keyboard" wx:if="{{!isHistory}}">
+    <view class="detail-keyboard-number">
+      <text class="tips">当前输入值</text>
+      <text class="now">{{number}}</text>
+      <text> </text>
+      <!-- <text class="tips">{{unit == 0 ? 'g' : 'kg'}}</text> -->
+    </view>
+    <key-board bind:number="handleNumber" bind:confirm="handleComfirm"></key-board>
+  </view>
+</view>

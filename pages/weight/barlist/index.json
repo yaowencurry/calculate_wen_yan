@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "BarItem":"./component/BarItem"
+  }
+}

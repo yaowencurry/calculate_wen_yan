@@ -1,0 +1,12 @@
+<view class="board">
+  <view class="board__number">
+    <view class="board__number__item" wx:for="{{numberList}}" wx:key="index" bindtap="handleNumberTap"
+      data-count="{{item}}">{{item}}</view>
+  </view>
+  <view class="board__handle">
+    <view class="board__handle__item" wx:for="{{handleList}}" wx:key="index" bindtap="handleComfirmTap"
+      data-count="{{item.type}}">
+      {{item.text}}
+    </view>
+  </view>
+</view>

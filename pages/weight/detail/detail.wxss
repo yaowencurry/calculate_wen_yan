@@ -1,0 +1,88 @@
+.detail {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-top {
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 90rpx;
+  box-sizing: border-box;
+  padding: 15rpx 20rpx;
+  color: #fff;
+  background-color: #0278da;
+}
+
+.detail-top .detail-top__title .detail-top__title__number {
+  font-weight: 700;
+  font-size: 34rpx;
+}
+
+.detail-top .detail-top__title .detail-top__title__now {
+  font-size: 28rpx;
+  margin-left: 15rpx;
+}
+
+.detail-info {
+  height: 41%;
+  padding: 15rpx 20rpx;
+  box-sizing: border-box;
+  overflow-y: auto;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* align-items: flex-start; */
+}
+
+.detail-info__item {
+  width: 21%;
+  height: 80rpx;
+  box-sizing: border-box;
+  border: 1px solid #0278da;
+  color: #0278da;
+  font-weight: 700;
+  padding: 15rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.detail-info__item:active {
+  background-color: red;
+  color: #fff;
+  border-color: #fff;
+}
+
+.detail-info__item:nth-child(n),
+.detail-info__item:nth-child(2n),
+.detail-info__item:nth-child(3n) {
+  margin-right: 29rpx;
+}
+
+.detail-info__item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.detail-keyboard-number {
+  height: 140rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 140rpx;
+  border-top: 1px solid #e0e0e0;
+  font-size: 64rpx;
+}
+
+.detail-keyboard-number .now {
+  color: #0278da;
+}
+
+.detail-keyboard-number .tips {
+  color: #333;
+  font-size: 28rpx;
+  width: 150rpx;
+}

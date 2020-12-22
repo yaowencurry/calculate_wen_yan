@@ -1,0 +1,15 @@
+.to-do-list-item {
+  width: 100%;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.to-do-list-item--btn {
+  margin: 0;
+  max-height: 65rpx;
+}
+.to-do-list-item .box {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}

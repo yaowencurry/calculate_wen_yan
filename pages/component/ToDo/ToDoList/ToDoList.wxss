@@ -1,0 +1,35 @@
+.to-do-list {
+  padding: 20rpx 30rpx;
+}
+.to-do-list .title {
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+  display: flex;
+  align-items: center;
+}
+.title::before {
+  content: "";
+  width: 5px;
+  height: 40rpx;
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: 15rpx;
+}
+.to-do-list .over {
+  color: #ff9844;
+}
+.over::before {
+  background-color: #ff9844;
+}
+.to-do-list .already {
+  color: #00c166;
+}
+.already::before {
+  background-color: #00c166;
+}
+.null {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #999999;
+}

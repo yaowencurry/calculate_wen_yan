@@ -1,0 +1,47 @@
+.index {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+.save {
+  margin-top: 20rpx;
+}
+.restart {
+  display: flex;
+  align-items: center;
+  color: #bfbfbf;
+  padding: 5rpx 20rpx;
+}
+.restart .tips {
+  margin-left: 15rpx;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20rpx;
+  font-weight: 700;
+}
+.section__title {
+  color: #bfbfbf;
+  font-size: 28rpx;
+}
+.picker {
+  color: #0078d7;
+  border: 1px solid #0078d7;
+  border-radius: 20rpx;
+  padding: 5rpx 15rpx;
+  font-size: 28rpx;
+}
+.resart-btn {
+  margin: 5rpx 20rpx 0 20rpx;
+  background-color: #e84343;
+  color: #fff;
+  font-size: 28rpx;
+}

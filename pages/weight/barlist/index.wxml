@@ -1,0 +1,14 @@
+<view class="bar-list">
+  <view class="bar-list__top">
+    <view>
+      <text>{{number}}号棚</text>
+      <text>已称重栏数：{{list.length}} 栏</text>
+    </view>
+    <button wx:if="{{!isHistory}}" class="submit-btn" size="mini" bindtap="backToList">完成</button>
+  </view>
+  <view class="bar-list__info">
+    <BarItem wx:for="{{list}}" wx:key="index" info="{{item}}" index="{{index}}" shelfId="{{shelfId}}" isHistory="{{isHistory}}" historyId="{{historyId}}"
+      bind:delete="deleteBarItem"></BarItem>
+  </view>
+  <button class="bar-list__button" bindtap="handleDetail" wx:if="{{!isHistory}}">添加新的一栏称重</button>
+</view>

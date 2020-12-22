@@ -1,0 +1,17 @@
+<view>
+    <view class="top">
+        <button bindtap="handleRestart" size="mini" class="resart-btn">初始化数据</button>
+        <view class="section">
+            <view class="section__title">录入单位：</view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    {{array[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="index">
+        <ShelfCard wx:for="{{list}}" wx:key="index" info="{{item}}" bind:clearShelf="deleteShelfData"></ShelfCard>
+        <button class="save" bindtap="handleSave" size="mini" type="primary">保存数据</button>
+    </view>
+</view>

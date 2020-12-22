@@ -1,0 +1,6 @@
+<view class="love">
+  <view>LZY</view>
+  <view>I LOVE YOU</view>
+  <!-- <button size="mini" bindtap="handlePause">{{btnText}}</button> -->
+  <text>By:YW</text>
+</view>

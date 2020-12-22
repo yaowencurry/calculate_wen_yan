@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ShelfCard": "./component/ShelfCard"
+  }
+}
