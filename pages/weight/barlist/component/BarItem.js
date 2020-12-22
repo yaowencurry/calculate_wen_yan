@@ -72,9 +72,10 @@ Component({
         index,
         historyId
       } = this.data;
+      let BASE_URL = '/pages/weight/detail/detail?';
       if (isHistory) {
         wx.navigateTo({
-          url: `/pages/weight/detail/detail?shelfId=${shelfId}&barId=${info.barId}&barNumber=${index+1}&historyId=${historyId}&isHistory=1`,
+          url: `${BASE_URL}shelfId=${shelfId}&barId=${info.barId}&barNumber=${index+1}&historyId=${historyId}&isHistory=1`,
         })
       } else {
         if (isDelete) {
@@ -85,7 +86,7 @@ Component({
           return
         }
         wx.navigateTo({
-          url: `/pages/weight/detail/detail?shelfId=${this.data.shelfId}&barId=${this.data.info.barId}&barNumber=${this.data.index+1}`,
+          url: `${BASE_URL}?shelfId=${this.data.shelfId}&barId=${this.data.info.barId}&barNumber=${this.data.index+1}`,
         })
         this.setData({
           isDelete: false
