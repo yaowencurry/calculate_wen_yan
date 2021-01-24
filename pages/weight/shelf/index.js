@@ -102,6 +102,24 @@ Page({
       weightdetailnumber: 0
     };
 
+    if(!userInfo.uid) {
+      wx.showModal({
+        title: '提示',
+        content: '当前未登陆，请先去登录账号，如无账户，请联系管理员',
+        success: (res) => {
+          if (res.confirm) {
+            wx.navigateTo({
+              url:'/pages/user/login/login'
+            })
+          }
+        },
+        fail: () => {
+          console.log(123);
+        }
+      })
+      return
+    }
+
     this.data.list.map(shed => {
       let shedObj = {
         shedname: shed.number,
@@ -155,6 +173,15 @@ Page({
       })
       submitData.data.push(shedObj)
     })
+
+    console.log(submitData);
+    if(submitData.weightdetailnumber < 1) {
+      wx.showToast({
+        title: '请添加称重数据',
+        icon: 'none'
+      })
+      return
+    }
     let weightid = await WEIGHT.ADD_WEIGHT(submitData)
     console.log(weightid)
 

@@ -39,6 +39,7 @@ Page({
     wx.getSetting({
       success: (res) => {
         if (!res.authSetting['scope.userInfo']) {
+          console.log(21)
           wx.authorize({
             scope: 'scope.userInfo',
             success(res) {
@@ -50,8 +51,12 @@ Page({
             }
           })
         } else {
+          console.log(21)
           this.getUserInfo();
         }
+      },
+      fail: (err) => {
+        console.log(err)
       }
     })
   },
