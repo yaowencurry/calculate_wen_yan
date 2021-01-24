@@ -5,7 +5,6 @@ import {
 } from '../../../utils/storage';
 
 Page({
-
   /**
    * 页面的初始数据
    */
