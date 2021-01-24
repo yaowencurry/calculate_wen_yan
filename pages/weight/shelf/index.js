@@ -4,6 +4,14 @@ import {
   getStorage
 } from '../../../utils/storage';
 
+import {
+  calAverage,
+  calDegree
+} from '../../../utils/calDuck'
+
+import WEIGHT from '../../../utils/urls/weight/api';
+import USER from '../../../utils/urls/user/api';
+
 Page({
 
   /**
@@ -79,7 +87,79 @@ Page({
       }
     })
   },
-  saveHistoryData() {
+  async saveHistoryData() {
+    const userInfo = wx.getStorageSync('userInfo')
+
+    let submitData = {
+      uid: userInfo.uid,
+      username: userInfo.username,
+      truename: userInfo.truename,
+      unit: String(this.data.index),
+      degree: '',
+      average: '',
+      data: [],
+      weightArr: [],
+      weightcolumnnumber: 0,
+      weightdetailnumber: 0
+    };
+
+    this.data.list.map(shed => {
+      let shedObj = {
+        shedname: shed.number,
+        shedid: Number(shed.shelfId),
+        shedstaff: userInfo.username,
+        degree: '222',
+        average: '222',
+        shedArr: [],
+        columnsheet: [],
+        weightcolumnnumber: 0,
+        weightdetailnumber: 0
+      }
+
+      shed.barList.map((bar, barIndex) => {
+        let barObj = {
+          columnname: barIndex + 1 + '号栏',
+          columnid: bar.barId,
+          comment: '今天第' + (barIndex + 1) + '栏称重',
+          degree: '333',
+          average: '333',
+          weightdetail: [],
+          columnArr: [],
+          weightcolumnnumber: 0,
+        }
+        submitData.weightcolumnnumber++;
+        shedObj.weightcolumnnumber++
+        bar.detail.map(weight => {
+          let detailObj = {
+            weightcount: weight.count,
+            weightdetailid: weight.id
+          }
+          barObj.weightdetail.push(detailObj);
+
+          submitData.weightArr.push(weight);
+          submitData.degree = calDegree(submitData.weightArr);
+          submitData.average = calAverage(submitData.weightArr);
+          submitData.weightdetailnumber++;
+
+          shedObj.shedArr.push(weight);
+          shedObj.degree = calDegree(shedObj.shedArr)
+          shedObj.average = calAverage(shedObj.shedArr)
+          shedObj.weightdetailnumber++;
+
+
+          barObj.columnArr.push(weight)
+          barObj.degree = calDegree(barObj.columnArr)
+          barObj.average = calAverage(barObj.columnArr)
+
+        })
+        shedObj.columnsheet.push(barObj)
+      })
+      submitData.data.push(shedObj)
+    })
+    let weightid = await WEIGHT.ADD_WEIGHT(submitData)
+    console.log(weightid)
+
+    return
     const date = new Date();
     const myDate = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
     wx.getStorage({

@@ -9,7 +9,7 @@ export function getStorage(key) {
       fail: () => {
         resolve()
       },
-      complete: ()=>{
+      complete: () => {
         reject(`get key:${key} data fail`)
       }
     })
@@ -29,4 +29,8 @@ export function setStorage(key, data) {
       }
     })
   })
+}
+
+export function setStorageSync(key, data) {
+  wx.setStorageSync(key, data)
 }
