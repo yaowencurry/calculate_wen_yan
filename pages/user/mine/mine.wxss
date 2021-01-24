@@ -1,0 +1,41 @@
+.mine {
+  position: relative;
+}
+.mine-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.mine-top image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.mine-top text {
+  margin-top: 10px;
+}
+
+.mine-list {
+  padding: 20px 15px 0;
+}
+.mine-list-item {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.mine-list-item > view .iconfont {
+  margin-right: 10px;
+}
+.quit-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #999;
+}

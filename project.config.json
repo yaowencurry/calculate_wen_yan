@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -21,13 +21,14 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
     "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
@@ -35,7 +36,8 @@
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "useApiHostProcess": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.1",
@@ -49,12 +51,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -91,20 +87,20 @@
           "id": -1,
           "name": "称重详情",
           "pathName": "pages/weight/detail/detail",
-          "scene": null,
-          "query": ""
+          "query": "",
+          "scene": null
         },
         {
           "name": "栏",
           "pathName": "pages/weight/barlist/index",
-          "scene": null,
-          "query": ""
+          "query": "",
+          "scene": null
         },
         {
           "name": "棚",
           "pathName": "pages/weight/shelf/index",
-          "scene": null,
-          "query": ""
+          "query": "",
+          "scene": null
         },
         {
           "name": "pages/weight/barlist/index",
@@ -139,6 +135,18 @@
         {
           "name": "数据分析",
           "pathName": "pages/weight/dataTotal/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/login/login",
+          "pathName": "pages/user/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/mine/mine",
+          "pathName": "pages/user/mine/mine",
           "scene": null
         }
       ]

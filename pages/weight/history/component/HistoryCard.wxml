@@ -1,10 +1,10 @@
 <view class="history-card" bindtap="handleHistoryDetail" bindtouchmove="handleTouchMove" bindtouchstart="handleTouchStart">
   <view class="history-card__info" style="margin-left: {{marginLeft}}">
-    <view class="history-card__info-date">{{info.date}}</view>
+    <view class="history-card__info-date">{{info.weighttime}}</view>
     <view class="history-card__info-data">
       <view class="history-card__info-data-info">
         <text>称重只数</text>
-        <text>{{info.count}} 只</text>
+        <text>{{info.weightdetailnumber || 0}} 只</text>
       </view>
       <view class="history-card__info-data-info">
         <text>均匀度</text>

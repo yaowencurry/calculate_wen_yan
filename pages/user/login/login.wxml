@@ -1,0 +1,12 @@
+<view class="login">
+  <text class="login-title">用户登录</text>
+  <view class="login-input">
+    <text>用户名或手机号:</text>
+    <input type="text" bindinput="usernameInput" placeholder="请输入用户名或手机号" />
+  </view>
+  <view class="login-input">
+    <text>用户密码:</text>
+    <input type="password" bindinput="passwordInput" placeholder="请输入密码" />
+  </view>
+  <button class="login-btn" bindtap="handleLogin">登录</button>
+</view>

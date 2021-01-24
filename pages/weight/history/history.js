@@ -11,6 +11,8 @@ import {
   setStorage
 } from '../../../utils/storage';
 
+import WEIGHT from '../../../utils/urls/weight/api'
+
 Page({
 
   /**
@@ -18,7 +20,11 @@ Page({
    */
   data: {
     historyList: [],
-    isRestart: null
+    isRestart: null,
+    pageNumber: 1,
+    pageSize: 6,
+    condition: '',
+    dataList: []
   },
 
   /**
@@ -47,7 +53,31 @@ Page({
         })
     })
   },
+  getWeightList() {
+    const userInfo = wx.getStorageSync('userInfo');
+    const {
+      pageSize,
+      pageNumber,
+      condition
+    } = this.data;
+
+    WEIGHT.GET_WEIGHT_LIST({
+        pageSize,
+        pageNumber,
+        condition,
+        uid: userInfo.uid
+      })
+      .then(res => {
+        const {
+          dataList
+        } = this.data;
+        res && this.setData({
+          dataList: dataList.concat(res)
+        })
+      })
+  },
   onLoad: function (options) {
+
     getStorage('historyData')
       .then(data => {
         this.setData({
@@ -83,14 +113,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getWeightList();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    
   },
 
   /**
@@ -112,7 +142,13 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    const {
+      pageNumber
+    } = this.data;
+    this.setData({
+      pageNumber: pageNumber + 1
+    })
+    this.getWeightList()
   },
 
   /**

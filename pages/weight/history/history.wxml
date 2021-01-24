@@ -10,6 +10,6 @@
       <text>图表分析</text>
     </view>
   </view>
-  <HistoryCard wx:for="{{historyList}}" info="{{item}}" wx:key="index" bind:delete="reloadData"></HistoryCard>
+  <HistoryCard wx:for="{{dataList}}" info="{{item}}" wx:key="index" bind:delete="reloadData"></HistoryCard>
   <view class="null-data" wx:if="{{historyList.length < 1}}">暂无数据，下拉数据试试吧～</view>
 </view>
